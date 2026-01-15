@@ -1,7 +1,7 @@
 package software.ulpgc.ImageViewer.application;
 
 import software.ulpgc.ImageViewer.application.io.FileImageStore;
-import software.ulpgc.ImageViewer.application.ui.ContainerSupplier;
+import software.ulpgc.ImageViewer.application.ui.FileContainerSupplier;
 import software.ulpgc.ImageViewer.application.ui.Desktop;
 import software.ulpgc.ImageViewer.application.ui.SwingImageDisplay;
 import software.ulpgc.ImageViewer.architecture.control.ImageManager;
@@ -13,7 +13,7 @@ import software.ulpgc.ImageViewer.architecture.io.ImageStore;
 public class Main {
     static void main() {
         ImageStore store = new FileImageStore();
-        ContainerSupplier containerSupplier = new ContainerSupplier();
+        FileContainerSupplier containerSupplier = new FileContainerSupplier();
         SwingImageDisplay display = new SwingImageDisplay();
         ImageManager manager = new ImageManager(display, store);
         manager.showCurrent();

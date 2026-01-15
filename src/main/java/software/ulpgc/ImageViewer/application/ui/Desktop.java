@@ -22,23 +22,36 @@ public class Desktop extends JFrame {
 
         commands = new HashMap<>();
 
-        JPanel panel = new JPanel();
-        panel.setLayout(null);
-        panel.setPreferredSize(new Dimension(800, 600));
+        JPanel mainPanel = new JPanel(new BorderLayout());
+
+        JPanel imagePanel = new JPanel();
+        imagePanel.setLayout(null);
+        imagePanel.setPreferredSize(new Dimension(800, 600));
 
         previousButton = previousButton();
-        panel.add(previousButton);
+        imagePanel.add(previousButton);
         nextButton = nextButton();
-        panel.add(nextButton);
+        imagePanel.add(nextButton);
 
         display.setBounds(0, 0, 800, 600);
-        panel.add(display);
+        imagePanel.add(display);
 
-        panel.addMouseListener(mouseListener(panel));
+        imagePanel.addMouseListener(mouseListener(imagePanel));
 
-        this.add(panel);
+        mainPanel.add(changeFolderButton(), BorderLayout.NORTH);
+        mainPanel.add(imagePanel, BorderLayout.CENTER);
+
+        this.add(mainPanel);
         this.pack();
         this.setLocationRelativeTo(null);
+    }
+
+    private JPanel changeFolderButton() {
+        JPanel topBar = new JPanel(new FlowLayout());
+        JButton button = new JButton("Change Folder");
+        button.addActionListener(_ -> commands.get("select folder").execute());
+        topBar.add(button);
+        return topBar;
     }
 
     private JButton nextButton() {

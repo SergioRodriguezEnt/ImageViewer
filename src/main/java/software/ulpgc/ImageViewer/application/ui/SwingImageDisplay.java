@@ -19,8 +19,8 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
 
     public SwingImageDisplay() {
         MouseAdapter adapter = new MouseAdapter();
-        this.addMouseListener(adapter);
-        this.addMouseMotionListener(adapter);
+        addMouseListener(adapter);
+        addMouseMotionListener(adapter);
     }
 
     @Override
