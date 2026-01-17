@@ -1,6 +1,6 @@
-package software.ulpgc.ImageViewer.architecture.ui;
+package software.ulpgc.imageviewer.architecture.ui;
 
-import software.ulpgc.ImageViewer.architecture.model.Image;
+import software.ulpgc.imageviewer.architecture.model.Image;
 
 import java.util.List;
 import java.util.function.IntConsumer;

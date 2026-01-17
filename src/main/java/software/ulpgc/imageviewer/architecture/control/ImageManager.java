@@ -1,7 +1,7 @@
-package software.ulpgc.ImageViewer.architecture.control;
+package software.ulpgc.imageviewer.architecture.control;
 
-import software.ulpgc.ImageViewer.architecture.io.ImageStore;
-import software.ulpgc.ImageViewer.architecture.ui.ImageDisplay;
+import software.ulpgc.imageviewer.architecture.io.ImageStore;
+import software.ulpgc.imageviewer.architecture.ui.ImageDisplay;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package software.ulpgc.ImageViewer.architecture.control;
+package software.ulpgc.imageviewer.architecture.control;
 
-import software.ulpgc.ImageViewer.architecture.io.ImageStore;
+import software.ulpgc.imageviewer.architecture.io.ImageStore;
 
 import java.util.function.Supplier;
 

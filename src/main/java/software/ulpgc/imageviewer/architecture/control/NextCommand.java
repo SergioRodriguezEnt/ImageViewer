@@ -1,4 +1,4 @@
-package software.ulpgc.ImageViewer.architecture.control;
+package software.ulpgc.imageviewer.architecture.control;
 
 public record NextCommand(ImageManager manager) implements Command {
     @Override

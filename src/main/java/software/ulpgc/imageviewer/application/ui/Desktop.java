@@ -1,6 +1,6 @@
-package software.ulpgc.ImageViewer.application.ui;
+package software.ulpgc.imageviewer.application.ui;
 
-import software.ulpgc.ImageViewer.architecture.control.Command;
+import software.ulpgc.imageviewer.architecture.control.Command;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,9 +16,11 @@ public class Desktop extends JFrame {
     private final Map<String, Command> commands;
 
     public Desktop(SwingImageDisplay display) {
-        this.setTitle("Image Viewer");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setFocusable(true);
+        setTitle("Image Viewer");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setFocusable(true);
+        setResizable(false);
+        setBackground(Color.GRAY);
 
         commands = new HashMap<>();
 
@@ -41,9 +43,9 @@ public class Desktop extends JFrame {
         mainPanel.add(changeFolderButton(), BorderLayout.NORTH);
         mainPanel.add(imagePanel, BorderLayout.CENTER);
 
-        this.add(mainPanel);
-        this.pack();
-        this.setLocationRelativeTo(null);
+        add(mainPanel);
+        pack();
+        setLocationRelativeTo(null);
     }
 
     private JPanel changeFolderButton() {
@@ -51,18 +53,19 @@ public class Desktop extends JFrame {
         JButton button = new JButton("Change Folder");
         button.addActionListener(_ -> commands.get("select folder").execute());
         topBar.add(button);
+        topBar.setBackground(Color.GRAY);
         return topBar;
     }
 
     private JButton nextButton() {
-        JButton button =  button("<", "next");
-        button.setBounds(20, (600 - 100) / 2, 60, 100);
+        JButton button =  button(">", "next");
+        button.setBounds(800-80, (600 - 100) / 2, 60, 100);
         return button;
     }
 
     private JButton previousButton() {
-        JButton button = button(">", "previous");
-        button.setBounds(800-80, (600 - 100) / 2, 60, 100);
+        JButton button = button("<", "previous");
+        button.setBounds(20, (600 - 100) / 2, 60, 100);
         return button;
     }
 

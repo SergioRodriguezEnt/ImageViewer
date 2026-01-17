@@ -1,6 +1,6 @@
-package software.ulpgc.ImageViewer.architecture.io;
+package software.ulpgc.imageviewer.architecture.io;
 
-import software.ulpgc.ImageViewer.architecture.model.Image;
+import software.ulpgc.imageviewer.architecture.model.Image;
 
 public interface ImageStore {
     Image previous();

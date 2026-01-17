@@ -1,7 +1,7 @@
-package software.ulpgc.ImageViewer.application.ui;
+package software.ulpgc.imageviewer.application.ui;
 
-import software.ulpgc.ImageViewer.architecture.model.Image;
-import software.ulpgc.ImageViewer.architecture.ui.ImageDisplay;
+import software.ulpgc.imageviewer.architecture.model.Image;
+import software.ulpgc.imageviewer.architecture.ui.ImageDisplay;
 
 import javax.swing.*;
 import java.awt.*;
